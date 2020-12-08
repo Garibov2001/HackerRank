@@ -1,0 +1,7 @@
+Link: https://www.hackerrank.com/challenges/most-commons/problem
+Difficulty: Medium
+
+Solution:
+from collections import Counter, OrderedDict
+
+[print(*k) for k in Counter(sorted(input())).most_common(3)]

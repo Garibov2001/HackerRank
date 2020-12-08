@@ -1,0 +1,28 @@
+Link: https://www.hackerrank.com/challenges/re-sub-regex-substitution/problem
+Difficulty: Easy
+
+Solution:
+lines = int(input())
+html = ""
+
+for _ in range(0, lines):
+    html += input()
+    html += '\n'
+    
+
+import re
+
+def changeToAnd(match):
+    return ' and '
+
+while(re.search(r"([ ][&]{2}[ ])", html)):    
+    html = re.sub(r"([ ][&]{2}[ ])", changeToAnd, html)
+
+def changeToOr(match):
+    return ' or '
+
+while(re.search(r"([ ][|]{2}[ ])", html)):    
+    html = re.sub(r"([ ][|]{2}[ ])", changeToOr, html)
+
+
+print(html)

@@ -1,0 +1,25 @@
+Link: https://www.hackerrank.com/challenges/py-collections-deque/problem?h_r=next-challenge&h_v=zen
+Difficulty: Easy
+Solution:
+from collections import deque
+
+numOperations = int(input())
+d = deque()
+
+for _ in range(numOperations):
+    temp = input().split()
+
+    if(temp[0] == "append"):
+        d.append(int(temp[1]))
+    else:
+        if(temp[0] == "appendleft"):
+            d.appendleft(int(temp[1]))
+        else:
+            if(temp[0] == "pop"):
+                d.pop()
+            else:
+                if(temp[0] == "popleft"):
+                    d.popleft()
+
+for i in d:
+    print(i,end=" ")

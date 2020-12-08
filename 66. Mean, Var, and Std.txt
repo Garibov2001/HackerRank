@@ -1,0 +1,21 @@
+Link: https://www.hackerrank.com/challenges/np-mean-var-and-std/problem
+Difficulty: Easy
+Solution:
+
+import numpy
+
+numpy.set_printoptions(sign=' ')
+numpy.set_printoptions(legacy='1.13')
+
+rawArr = []
+
+cases = list(map(int,input().split()))
+
+for i in range(cases[0]):
+    rawArr.append(list(map(int, input().split())))
+
+print (numpy.mean(rawArr, axis = 1)) 
+
+print (numpy.var(rawArr, axis = 0)) 
+
+print (numpy.std(rawArr)) 

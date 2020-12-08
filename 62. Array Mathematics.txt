@@ -1,0 +1,26 @@
+Link: https://www.hackerrank.com/challenges/np-array-mathematics/problem?h_r=next-challenge&h_v=zen
+Difficulty: Easy
+
+Solution:
+import numpy
+
+nums = list(map(int, input().split()))
+arr_A = []
+for i in range(nums[0]):
+    arr_A.append(list(map(int, input().split())))
+
+arr_B = []
+for j in range(nums[0]):
+    arr_B.append(list(map(int, input().split())))
+
+
+a = numpy.array(arr_A, int)
+b = numpy.array(arr_B, int)
+
+
+print (a + b)
+print (a - b)
+print (a * b)
+print (a // b)
+print (a % b)                   
+print (a**b)

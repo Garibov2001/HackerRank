@@ -1,0 +1,19 @@
+Link: https://www.hackerrank.com/challenges/map-and-lambda-expression/problem
+Difficulty: Easy
+Solution:
+
+cube = lambda x: x**3 
+
+def fibonacci(n):
+    tempList = []
+    for i in range(n):
+        if(len(tempList)<2):
+            tempList.append(i)
+        else:
+            tempList.append(tempList[i-2]+tempList[i-1])
+    return tempList
+
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))

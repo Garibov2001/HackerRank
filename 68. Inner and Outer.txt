@@ -1,0 +1,17 @@
+Link: https://www.hackerrank.com/challenges/np-inner-and-outer/problem?h_r=next-challenge&h_v=zen
+Difficulty: Easy
+
+Solution:
+
+import numpy as np
+
+arr1 = np.array(list(map(int, input().split()) ))
+arr2 = np.array(list(map(int, input().split()) ))
+
+
+print(np.inner(arr1,arr2))
+print(np.outer(arr1,arr2))
+
+
+
+

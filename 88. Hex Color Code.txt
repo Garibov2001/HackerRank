@@ -1,0 +1,42 @@
+Link: https://www.hackerrank.com/challenges/hex-color-code/problem
+Difficulty: Easy
+Solution: 
+
+lines = int(input())
+
+tempCss = ''
+for _ in range(0, lines):
+    tempCss += input()
+tempCss = tempCss.replace(" ", "")
+
+
+import re
+
+pattern = r'(#[a-fA-F0-9]{3})[;,)]|(#[a-fA-F0-9]{6})[;,)]'
+result = re.findall(pattern, tempCss)
+
+for eachTuple in result:
+    for eachHex in eachTuple:
+        if(len(eachHex)!=0):
+            print(eachHex)
+    
+
+lines = int(input())
+
+tempCss = ''
+for _ in range(0, lines):
+    tempCss += input()
+tempCss = tempCss.replace(" ", "")
+
+
+import re
+
+pattern = r'(#[a-fA-F0-9]{3})[;,)]|(#[a-fA-F0-9]{6})[;,)]'
+result = re.findall(pattern, tempCss)
+
+for eachTuple in result:
+    for eachHex in eachTuple:
+        if(len(eachHex)!=0):
+            print(eachHex)
+    
+

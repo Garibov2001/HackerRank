@@ -1,0 +1,20 @@
+Link: https://www.hackerrank.com/challenges/capitalize/problem
+Difficulty: Easy
+Solution: 
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+
+    myList = s.split(' ')
+    second = [x.capitalize() for x in myList ]
+
+    return ' '.join(second)
+
+if __name__ == '__main__':

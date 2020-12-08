@@ -1,0 +1,17 @@
+Link: https://www.hackerrank.com/challenges/zipped/problem
+Difficulty: Easy
+Solution:
+
+sysInput = list(map(int, input().split()))
+tempList = []
+
+
+D = []
+for _ in range(sysInput[1]):
+    D = D + [list(map(float,input().split()))]
+
+result = list(zip(*D))
+
+for eachTuple in result:
+    # print(eachTuple)
+    print(sum(eachTuple)/sysInput[1])

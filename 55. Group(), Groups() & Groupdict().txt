@@ -1,0 +1,15 @@
+Link: https://www.hackerrank.com/challenges/re-group-groups/problem?h_r=next-challenge&h_v=zen
+Difficulty: Easy
+
+Solution:
+getInput = input()
+
+isEnter = True
+for i in range(0, len(getInput)-1):
+    if(getInput[i].isalnum() and  getInput[i] == getInput[i + 1]):
+        print(getInput[i])
+        isEnter = False
+        break
+
+if(isEnter):
+    print(-1)

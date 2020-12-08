@@ -1,0 +1,35 @@
+Link: https://www.hackerrank.com/challenges/itertools-combinations-with-replacement/problem
+Difficulty: Easy
+Solution:
+
+from itertools import combinations_with_replacement
+
+getInp = input().split()
+
+
+mylist = list(combinations_with_replacement(getInp[0], int(getInp[1])))
+
+tempList = []
+
+for eachTuple in mylist:
+    text =""
+    for eachElem in eachTuple:
+        text += eachElem
+
+    tempChar = []
+    for char in text:
+        tempChar.append(char)
+    tempChar.sort()
+
+    newChar = ""
+    for char in tempChar:
+        newChar += char
+
+    tempList.append(newChar)
+
+tempList.sort()
+
+for i in tempList:
+    print(i)
+
+

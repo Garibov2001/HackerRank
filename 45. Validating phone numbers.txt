@@ -1,0 +1,13 @@
+Link: https://www.hackerrank.com/challenges/validating-the-phone-number/problem
+Difficulty: Easy
+Solution:
+
+import re
+numberInput = int(input())
+pattern = re.compile(r'(7|8|9)\d{9}$')
+
+for _ in range(numberInput):
+    if(pattern.match(input())):
+        print("YES")
+    else:
+        print("NO")

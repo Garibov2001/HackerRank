@@ -1,0 +1,19 @@
+Link: https://www.hackerrank.com/challenges/np-concatenate/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+Difficulty: Easy
+
+Solution:
+import numpy
+
+
+size = list(map(int, input().split()))
+
+firstArr = []
+for i in range(size[0]):
+    firstArr.append(list(map(int, input().split())))
+
+secondArr = []
+for i in range(size[1]):
+    secondArr.append(list(map(int, input().split())))
+
+
+print (numpy.concatenate((firstArr, secondArr), axis = 0))

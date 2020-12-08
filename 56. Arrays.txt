@@ -1,0 +1,14 @@
+Link: https://www.hackerrank.com/challenges/np-arrays/problem
+Difficulty: Easy
+
+Solution:
+import numpy
+
+def arrays(arr):
+    arr.reverse()
+    b = numpy.array(arr,float)
+    return b
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)

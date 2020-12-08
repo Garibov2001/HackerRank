@@ -1,0 +1,9 @@
+Link: https://www.hackerrank.com/challenges/np-eye-and-identity/problem
+Difficulty: Easy
+Solution:
+
+import numpy
+
+nums = list(map(int, input().split()))
+print ( str(numpy.eye(nums[0], nums[1], k = 0)).replace('1',' 1').replace('0',' 0') )
+

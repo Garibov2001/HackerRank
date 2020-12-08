@@ -1,0 +1,21 @@
+Link: https://www.hackerrank.com/challenges/ginorts/problem?h_r=next-challenge&h_v=zen
+Difficulty: Easy
+Solution: 
+
+testStr = input()
+
+
+lower = [x for x in testStr if(x.islower())]
+lower.sort()
+
+upper = [x for x in testStr if(x.isupper())]
+upper.sort()
+
+odd = [x for x in testStr if(x.isdigit() and int(x)%2==1)]
+odd.sort()
+
+even = [x for x in testStr if(x.isdigit() and int(x)%2==0)]
+even.sort()
+
+
+print("".join(lower + upper + odd + even))

@@ -1,0 +1,22 @@
+Link: https://www.hackerrank.com/challenges/np-sum-and-prod/problem?h_r=next-challenge&h_v=zen
+Difficulty: Easy
+
+Solution:
+import numpy
+
+rawArr = []
+
+cases = list(map(int,input().split()))
+
+for i in range(cases[0]):
+    rawArr.append(list(map(int, input().split())))
+
+my_array = numpy.array(rawArr)
+
+sumArr = numpy.sum(my_array, axis = 0)
+
+mySum = 1
+for i in sumArr:
+    mySum *= i
+
+print(mySum)

@@ -1,0 +1,19 @@
+Link: https://www.hackerrank.com/challenges/no-idea/problem
+Difficulty: Meidum
+
+Solution:
+n, m =  tuple(map(int, input().split()))
+myArr =  list(map(int, input().split())) #n integer
+
+liked_set = set((map(int, input().split())))  #m integer
+disliked_set = set((map(int, input().split()))) #m integer
+
+initialHapp = 0
+
+for eachInt in myArr:
+    if (eachInt in liked_set):
+        initialHapp += 1
+    if (eachInt in disliked_set):
+        initialHapp -= 1
+
+print(initialHapp)

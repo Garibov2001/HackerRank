@@ -1,0 +1,28 @@
+Link: https://www.hackerrank.com/challenges/np-dot-and-cross/problem
+Difficulty: Easy
+
+Solution:
+
+import numpy as np
+
+number = int(input())
+
+
+tempArr1 = []
+tempArr2 = []
+
+for i in range(number):
+    tempArr1.append(list(map(int, input().split())))
+
+for i in range(number):
+    tempArr2.append(list(map(int, input().split())))
+
+# print(tempArr1)
+# print(tempArr2)
+
+arr1 = np.array(tempArr1)
+arr2 = np.array(tempArr2)
+
+arr_result = np.dot(arr1,arr2)
+
+print(arr_result)

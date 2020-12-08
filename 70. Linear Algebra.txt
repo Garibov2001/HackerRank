@@ -1,0 +1,14 @@
+Link: https://www.hackerrank.com/challenges/np-linear-algebra/problem?h_r=next-challenge&h_v=zen
+Difficulty: Easy
+
+Solution:
+import numpy
+counter = int(input())
+
+tempArr = []
+
+for i in range(counter):
+    tempArr.append(list(map(float, input().split())))
+
+print(round(numpy.linalg.det(tempArr), 2))
+

@@ -1,0 +1,33 @@
+Link: https://www.hackerrank.com/challenges/py-collections-ordereddict/problem
+Difficulty: Easy
+Solution:
+
+def CombineText (argList):
+    tempDict = {}
+    strList = []
+    for i in range(0, len(argList)):
+        if(argList[i].isalpha()):
+            strList.append(argList[i])
+        else:
+            tempDict[" ".join(strList)]=int(argList[i])
+    return tempDict
+
+resultDict = {}
+
+testCase = int(input())
+
+for i in range(testCase):
+    myList = input().split()
+    myDict = CombineText(myList)
+
+    for key,value in myDict.items():
+
+        if( key in resultDict):
+            resultDict[key] = resultDict[key] + int(value)
+        else:
+            resultDict.update(myDict)
+
+for key,value in resultDict.items():
+    print(f'{key} {value}')
+
+
