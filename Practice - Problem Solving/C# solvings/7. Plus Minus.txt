@@ -1,0 +1,49 @@
+Link : https://www.hackerrank.com/challenges/plus-minus/problem
+
+
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+class Solution {
+
+    // Complete the plusMinus function below.
+    static void plusMinus(int[] arr) 
+    {
+        float plusCount = 0;
+        float minusCount = 0;
+        float zeroCount = 0;
+
+        arr.ToList().ForEach(item => {
+            if (item > 0)
+                plusCount++;
+            else if (item == 0)
+                zeroCount++;
+            else
+                minusCount++;
+        });
+
+        Console.WriteLine((plusCount / arr.Count()).ToString("N6"));
+        Console.WriteLine((minusCount / arr.Count()).ToString("N6"));
+        Console.WriteLine((zeroCount / arr.Count()).ToString("N6"));
+
+    }
+
+    static void Main(string[] args) {
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+        ;
+        plusMinus(arr);
+    }
+}
